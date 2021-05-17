@@ -1,4 +1,4 @@
-package com.example.rupeek.ui
+package com.example.sandeep.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,8 +6,8 @@ import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.example.core.util.AppLog
 import com.example.core.util.Status
-import com.example.rupeek.MainViewModel
-import com.example.rupeek.R
+import com.example.sandeep.MainViewModel
+import com.example.sandeep.R
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

@@ -1,4 +1,4 @@
-package com.example.rupeek
+package com.example.sandeep
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

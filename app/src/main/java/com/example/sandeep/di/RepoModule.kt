@@ -1,7 +1,7 @@
-package com.example.rupeek.di
+package com.example.sandeep.di
 
-import com.example.rupeek.repo.MainRepoSource
-import com.example.rupeek.repo.MainRepository
+import com.example.sandeep.repo.MainRepoSource
+import com.example.sandeep.repo.MainRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

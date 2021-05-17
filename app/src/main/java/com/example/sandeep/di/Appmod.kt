@@ -1,11 +1,8 @@
-package com.example.rupeek.di
+package com.example.sandeep.di
 
-import com.example.rupeek.MainRemoteSource
 import dagger.Module
-import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
 
 /**
  * Created by Sandeep Sankla

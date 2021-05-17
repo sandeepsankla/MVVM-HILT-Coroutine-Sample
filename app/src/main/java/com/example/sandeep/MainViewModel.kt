@@ -1,10 +1,10 @@
-package com.example.rupeek
+package com.example.sandeep
 
 import android.util.Log
 import androidx.lifecycle.*
 import com.example.core.util.GenericApiResponse
 import com.example.core.util.Resource
-import com.example.rupeek.repo.MainRepository
+import com.example.sandeep.repo.MainRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch

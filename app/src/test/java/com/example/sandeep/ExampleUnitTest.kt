@@ -1,4 +1,4 @@
-package com.example.rupeek
+package com.example.sandeep
 
 import org.junit.Test
 

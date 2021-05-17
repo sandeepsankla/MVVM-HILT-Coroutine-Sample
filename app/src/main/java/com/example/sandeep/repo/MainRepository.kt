@@ -1,10 +1,10 @@
-package com.example.rupeek.repo
+package com.example.sandeep.repo
 
 import android.util.Log
 import com.example.core.util.GenericApiResponse
 import com.example.core.util.Resource
-import com.example.rupeek.MainRemoteSource
-import com.example.rupeek.User
+import com.example.sandeep.MainRemoteSource
+import com.example.sandeep.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
