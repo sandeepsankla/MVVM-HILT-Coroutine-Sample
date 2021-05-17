@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SampleHiltMVVM</string>
+    <string name="lat_long">Lat:12.3777 Long: 14.4777</string>
+</resources>
