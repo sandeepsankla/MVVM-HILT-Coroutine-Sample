@@ -13,8 +13,7 @@ class MainRemoteSource @Inject constructor(val formattedResponse: FormattedRespo
 
     suspend fun getWeatherDetails(): Resource<GenericApiResponse<User>> {
 
-        val url = "https://user-service.parkwheels.co.in/api/v1/user/profile/"
-       // val url = "http://api.weatherstack.com/current?access_key=313510887793bf027cb42a57e9d43d42&query=New York"
+        val url = "http://api.weatherstack.com/current?access_key=313510887793bf027cb42a57e9d43d42&query=New York"
         Log.d("sasa", "in main source")
         val datares : Resource<GenericApiResponse<User>>  = formattedResponse.GetCall(url, hashMapOf())
         Log.d("sasa", "$datares")
@@ -22,13 +21,9 @@ class MainRemoteSource @Inject constructor(val formattedResponse: FormattedRespo
     }
    suspend fun getWeatherDetail(): Resource<Weather> {
 
-       // val url = "https://user-service.parkwheels.co.in/api/v1/user/profile/"
         val url = "http://api.weatherstack.com/current?access_key=313510887793bf027cb42a57e9d43d42&query=New York"
         Log.d("sasa", "in main source")
-        val datares : Resource<Weather>  = formattedResponse.GetCall(
-            url,
-            hashMapOf()
-        )
+        val datares : Resource<Weather>  = formattedResponse.GetCall(url, hashMapOf())
         Log.d("sasa", "$datares")
         return datares
     }

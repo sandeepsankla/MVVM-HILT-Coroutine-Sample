@@ -76,14 +76,6 @@ class RemoteApiModule {
     @Provides
     @Singleton
     fun providesOkHttpClient(): OkHttpClient {
-       /* @TimeOutInterceptor timeOutInterceptor : Interceptor,
-        @HeaderInterceptor headers :Interceptor,
-        loggingInterceptor: HttpLoggingInterceptor*/
-        //  private fun provideOkHttpClient(
-        // context: Applicatio{
-        //  ): OkHttpClient {
-        //   val cacheSize = 20 * 1024 * 1024L // 20 MB
-        //   val cache = Cache(context.cacheDir, cacheSize)*//*
         val readTimeout = 17L
         val connectTimeout = 17L
         val writeTimeout = 17L
@@ -116,34 +108,6 @@ class RemoteApiModule {
       return HeaderInceptor()
     }
 
-
-     /*   return Interceptor{chain->
-//            val pref = getSharedPreferenceInstance(context)
-//            authToken = pref.getValue(AUTH_TOKEN_KEY, "")
-//            clientId = pref.getValue(CLIENT_ID, "")
-//            clientSecret = pref.getValue(CLIENT_SECRET, "")
-//            val deviceId = pref.getValue(DEVICE_ID, "")
-            var request = chain.request()
-             *//*  request.newBuilder()
-             .addHeader("Authorization", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzQ4MDIyNzIsInN1YiI6IjIzMTM1MSIsImh0dHBzOi8vcGFya3doZWVscy5jby5pbi8iOnsidXNlcl9pZCI6MjMxMzUxLCJuYW1lIjoiVGVzdCBTdXBlcnZpc29yIiwiZW1haWwiOiJkZWVwYWt2ZXJ0QGdtYWlsLmNvbSIsInBob25lX251bWJlciI6IjU1NTU1NTU1NTUiLCJyb2xlIjoic3VwZXJ2aXNvciIsImRldmljZV9pZCI6bnVsbH19.QtRonGB4FiPROFEx72xX-2OpWbPglXx6_Fz1IXrcgw0")
-             .addHeader("client-id", USER_CLIENT_ID)
-            .addHeader("client-secret", USER_CLIENT_SECRET)
-           .addHeader("platform", PLATFORM_NAME)
-            .addHeader("version-name", "1")
-            .addHeader("version-code","1")
-            .build()*//*
-//                .header("app_name", "ABC")
-//                .header("platform", "android")
-//                .header("Authorization", authToken)
-//                .header("client-secret", clientSecret)
-//                .header("client-id", clientId)
-//                .header("device-id", deviceId)
-//                .build()
-            val response = chain.proceed(request)
-            AppLog.e("sasa-head", request.toString())
-            response
-        }*/
- //   }
 
     @Provides
     @Singleton
@@ -186,8 +150,6 @@ class RemoteApiModule {
     @Provides
     @Singleton
     fun providesNetworkService() : ApiInterface {
-       /* return provideRetrofit(okHttpClient, gsonConverterFactory, coroutineCallAdapterFactory, liveDataCallAdapterFactory,
-            liveDataResponseBodyConverterFactory).create(ApiInterface::class.java)*/
         return provideRetrofit().create(ApiInterface::class.java)
 
     }
