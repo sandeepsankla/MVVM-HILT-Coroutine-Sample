@@ -14,17 +14,27 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:id="@+id/header_tv"
+        android:id="@+id/tvHeader"
         android:text="@string/lat_long"/>
 
    <androidx.recyclerview.widget.RecyclerView
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:id="@+id/recycler_view"
+       android:id="@+id/recyclerView"
        android:layout_margin="8dp"
        tools:listitem="@layout/item_weather_layout"
-       app:layout_constraintTop_toBottomOf="@id/header_tv"
+       app:layout_constraintTop_toBottomOf="@id/tvHeader"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toEndOf="parent"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.example.sandeep
 
 import android.util.Log
 import androidx.lifecycle.*
+import com.example.core.base.BaseViewModel
 import com.example.core.util.GenericApiResponse
 import com.example.core.util.Resource
 import com.example.sandeep.repo.MainRepository
@@ -11,7 +12,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel  @Inject constructor(private val repository : MainRepository): ViewModel() {
+class MainViewModel  @Inject constructor(private val repository : MainRepository): BaseViewModel() {
 
     private var _character = MutableLiveData<Resource<GenericApiResponse<User>>>()
     val character: LiveData<Resource<GenericApiResponse<User>>> = _character

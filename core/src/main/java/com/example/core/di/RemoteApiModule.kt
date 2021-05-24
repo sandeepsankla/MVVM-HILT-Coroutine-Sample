@@ -42,23 +42,6 @@ class RemoteApiModule {
     @Singleton
     fun provideLiveDataResponseBodyConverterFactory(): LiveDataResponseBodyConverterFactory = LiveDataResponseBodyConverterFactory.create()
 
-/*    @Provides
-    @Singleton
-    fun provideRetrofit(
-        client: OkHttpClient,
-        gsonConverterFactory: GsonConverterFactory,
-        coroutineCallAdapterFactory: CoroutineCallAdapterFactory,
-        liveDataCallAdapterFactory: LiveDataCallAdapterFactory,
-        liveDataResponseBodyConverterFactory: LiveDataResponseBodyConverterFactory
-
-    ): Retrofit = Retrofit.Builder().run {
-        baseUrl(BASE_URL)
-            .addConverterFactory(gsonConverterFactory)
-            .addCallAdapterFactory(coroutineCallAdapterFactory)
-            .addCallAdapterFactory(liveDataCallAdapterFactory)
-            .addConverterFactory(liveDataResponseBodyConverterFactory)
-            .client(client).build()
-    } */
     @Provides
     @Singleton
     fun provideRetrofit(): Retrofit = Retrofit.Builder().run {
@@ -151,6 +134,12 @@ class RemoteApiModule {
     @Singleton
     fun providesNetworkService() : ApiInterface {
         return provideRetrofit().create(ApiInterface::class.java)
+
+    }
+    @Provides
+    @Singleton
+    fun providesAppLog() : AppLog {
+        return AppLog()
 
     }
 

@@ -28,15 +28,15 @@ fun View.hideKeyboard() {
         ?.hideSoftInputFromWindow(this.windowToken, 0)
 }
 
-fun View.toVisible() {
+fun View.show() {
     this.visibility = View.VISIBLE
 }
 
-fun View.toGone() {
+fun View.hide() {
     this.visibility = View.GONE
 }
 
-fun View.toInvisible() {
+fun View.inVisible() {
     this.visibility = View.GONE
 }
 
