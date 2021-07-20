@@ -14,16 +14,24 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel  @Inject constructor(private val repository : MainRepository): BaseViewModel() {
 
-    private var _character = MutableLiveData<Resource<GenericApiResponse<User>>>()
-    val character: LiveData<Resource<GenericApiResponse<User>>> = _character
+    private var _user = MutableLiveData<Resource<User>>()
+    val user: LiveData<Resource<User>> = _user
 
 
-    fun getCall(){
+    /*fun getCall(){
         Log.d("sasas","getCall in vm")
         viewModelScope.launch {
             repository.getWeatherDetails().collect {
                 _character.value = it
             }
         }
+    }*/
+
+    fun addUser(name: String, city: String) {
+    viewModelScope.launch {
+        repository.addNewUser(name, city).collect{
+            _user.value = it
+        }
+    }
     }
 }
