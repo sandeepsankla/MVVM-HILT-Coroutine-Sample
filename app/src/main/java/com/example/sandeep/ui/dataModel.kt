@@ -1,22 +1,19 @@
 package com.example.sandeep
 
-//import com.google.gson.annotations.SerializedName
+import com.google.firebase.firestore.PropertyName
+import com.google.gson.annotations.SerializedName
 
-/*
-data class WeatherData (
-    */
-/*
-    * "temp":24,
-"time":1564012800,
-"rain":40,
-"wind":15*//*
 
-    @SerializedName("temp") val temp:Int?,
-    @SerializedName("time") val time:Long?,
-    @SerializedName("rain") val rain:Int?,
-    @SerializedName("wind") val wind:Int?,
+data class User(
+    @SerializedName("id")
+    @get:PropertyName("id") @set:PropertyName("id")
+    var id: String? = null,
+
+    @SerializedName("name")
+    @get:PropertyName("name") @set:PropertyName("name")
+    var name: String? = null,
+
+    @SerializedName("city")
+    @get:PropertyName("city") @set:PropertyName("city")
+    var city: String? = null
 )
-
-data class WeatherResponse(
-    @SerializedName("data") val weatherData: WeatherData
-)*/

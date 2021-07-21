@@ -1,10 +1,9 @@
-package com.example.sandeep
+package com.example.sandeep.ui
 
-import android.util.Log
 import androidx.lifecycle.*
 import com.example.core.base.BaseViewModel
-import com.example.core.util.GenericApiResponse
 import com.example.core.util.Resource
+import com.example.sandeep.User
 import com.example.sandeep.repo.MainRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collect

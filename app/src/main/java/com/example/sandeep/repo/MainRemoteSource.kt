@@ -1,11 +1,9 @@
-package com.example.sandeep
+package com.example.sandeep.repo
 
-import android.util.Log
 import com.example.core.di.FormattedResponse
-import com.example.core.util.GenericApiResponse
 import com.example.core.util.Resource
+import com.example.sandeep.User
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 /**
@@ -31,8 +29,8 @@ class MainRemoteSource @Inject constructor(val formattedResponse: FormattedRespo
     }
 */
     fun addNewUser(name: String, city: String): Resource<User> {
-       val user = User("1",  name, city)
-       FirebaseFirestore.getInstance().collection("userList").document()
+       val user = User(System.currentTimeMillis().toString(),  name, city)
+       FirebaseFirestore.getInstance().collection("userList").document(user.id!!)
            .set(user)
        return Resource.Success(user)
     }

@@ -6,5 +6,5 @@ import com.example.sandeep.User
 import kotlinx.coroutines.flow.Flow
 
 interface MainRepoSource {
-   suspend  fun getWeatherDetails() : Flow<Resource<GenericApiResponse<User>>>
+    fun addNewUser(name: String, city: String):Flow<Resource<User>>
 }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "900274809269",
+    "project_id": "offlineapp-47140",
+    "storage_bucket": "offlineapp-47140.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900274809269:android:b087d00d3db0324b4491fc",
+        "android_client_info": {
+          "package_name": "com.example.sandeep"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900274809269-eg1ounv8jrcepg9qjc1lqrjepdd2skq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_wlAfG-yIifz-pza4C47RBQoouZzRMhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900274809269-eg1ounv8jrcepg9qjc1lqrjepdd2skq4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">SampleHiltMVVM</string>
+    <string name="app_name">OfflineApp</string>
     <string name="lat_long">Lat:12.3777 Long: 14.4777</string>
+    <string name="enter_user_name">Enter user name</string>
+    <string name="enter_user_city">Enter user city</string>
+    <string name="add_user_details">Add User Details</string>
+    <string name="submit">submit</string>
 </resources>
