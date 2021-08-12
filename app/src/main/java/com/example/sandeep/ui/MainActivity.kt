@@ -8,7 +8,7 @@ import com.example.core.base.BaseActivity
 import com.example.core.exension.*
 import com.example.core.util.Resource
 import com.example.core.util.Status
-import com.example.sandeep.User
+import com.example.sandeep.Person
 import com.example.sandeep.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,7 +24,7 @@ class MainActivity : BaseActivity() {
         observe(viewModel.user, ::userListener)
         observeEvent(viewModel.showSnackBar, ::showErrorMessage)
     }
-    private fun userListener(resource: Resource<User>) {
+    private fun userListener(resource: Resource<Person>) {
         applog.d(TAG, resource.status.name)
         when (resource.status) {
             Status.SUCCESS -> {

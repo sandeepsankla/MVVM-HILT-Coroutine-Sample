@@ -1,9 +1,11 @@
 package com.example.sandeep.repo
 
+import android.util.Log
 import com.example.core.di.FormattedResponse
 import com.example.core.util.Resource
-import com.example.sandeep.User
-import com.google.firebase.firestore.FirebaseFirestore
+import com.example.sandeep.Person
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import javax.inject.Inject
 
 /**
@@ -11,27 +13,16 @@ import javax.inject.Inject
  */
 class MainRemoteSource @Inject constructor(val formattedResponse: FormattedResponse)   {
 
-   /* suspend fun getWeatherDetails(): Resource<GenericApiResponse<User>> {
+    fun addNewUser(name: String, city: String): Resource<Person> {
+       val user = Person(System.currentTimeMillis().toString(),  name, city)
+       try{
+           val sasa = Firebase.firestore
+           sasa.collection("userList").document(user.id!!)
+               .set(user)
+       }catch (e:Exception){
+           e.message?.let { Log.e("sasa", it) }
+       }
 
-        val url = "http://api.weatherstack.com/current?access_key=313510887793bf027cb42a57e9d43d42&query=New York"
-        Log.d("sasa", "in main source")
-        val datares : Resource<GenericApiResponse<User>>  = formattedResponse.GetCall(url, hashMapOf())
-        Log.d("sasa", "$datares")
-        return datares
-    }
-   suspend fun getWeatherDetail(): Resource<Weather> {
-
-        val url = "http://api.weatherstack.com/current?access_key=313510887793bf027cb42a57e9d43d42&query=New York"
-        Log.d("sasa", "in main source")
-        val datares : Resource<Weather>  = formattedResponse.GetCall(url, hashMapOf())
-        Log.d("sasa", "$datares")
-        return datares
-    }
-*/
-    fun addNewUser(name: String, city: String): Resource<User> {
-       val user = User(System.currentTimeMillis().toString(),  name, city)
-       FirebaseFirestore.getInstance().collection("userList").document(user.id!!)
-           .set(user)
        return Resource.Success(user)
     }
 
